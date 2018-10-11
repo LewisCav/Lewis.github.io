@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Form</title>
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <script src="javascript/js.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body>
+        <form action="#" id="regform" class="registrationform" method="POST" novalidate>
+            <fieldset>
+                <legend>Registration Form</legend>
+                <div class="inputsection">
+                    <label>Username</label>
+                    <input type="text" placeholder="Username" pattern="[a-zA-Z0-9]{6,16}" maxlength="16" required="required" name="username" id="username">
+                    <i class="far fa-user"></i>
+                    <div class="helper"><p>Usernames can only use numbers and/or letters and must have a length between 6 and 16.</p></div>
+                    <div class="errormessage"><p>Username is invalid.</p></div>
+                </div>
+                <div class="inputsection">
+                    <label>Password</label>
+                    <input type="password" placeholder="Password" pattern="[a-zA-Z0-9]{6,16}" maxlength="16" required="required" name="password" id="password">
+                    <i class="fas fa-key"></i>
+                    <div class="helper"><p>Passwords can only use numbers and/or letters and must have a length between 6 and 16.</p></div>
+                    <div class="errormessage" ><p>Password is invalid.</p></div>
+                </div>
+                <div class="inputsection">
+                    <label>Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" maxlength="16" required="required" name="conpassword" id="conpassword" onkeyup="check_pass()">
+                    <i class="fas fa-key"></i>
+                    <div class="helper"><p>This field must match exactly to your password.</p></div>
+                    <div class="errormessage" id="conerrormessage"> Error </div>
+                </div>
+                <div class="inputsection">
+                    <label>Email</label>
+                    <input type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required="required" name="email" id="email">
+                    <i class="far fa-envelope"></i>
+                    <div class="helper"><p>A valid email can use numbers, letters and these symbols ._%+- before the @ symbol.</p></div>
+                    <div class="errormessage"><p>This email is invalid.</p></div>
+                </div>
+                <div class="inputsection">
+                    <label>First Name</label>
+                    <input type="text" placeholder="First Name" pattern="[a-zA-Z]{2,22}" required="required" name="firstname" id="firstname">
+                    <i class="fas fa-signature"></i>
+                    <div class="helper"><p>When entering a first name please only letters within 2 - 22 characters.</p></div>
+                    <div class="errormessage"><p>Please use only letters within 22 characters.</p></div>
+                </div>
+                <div class="inputsection">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Last Name" pattern="[a-zA-Z]{2,26}" required="required" name="lastname" id="lastname">
+                    <i class="fas fa-signature"></i>
+                    <div class="helper"><p>When entering a last name please only letters within 2 - 22 characters.</p></div>
+                    <div class="errormessage"><p>Please use only letters within 22 characters.</p></div>
+                </div>
+                <div class="inputsection">
+                    <div class="notrequired">
+                        <label>Mobile Number</label>
+                        <input type="text" placeholder=" " pattern="[0-9]{10}" maxlength="10" name="mobile" id="mobile">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div class="helper"><p>Only mobile numbers starting with 04 are accepcted, no need for area code (+61).</p></div>
+                        <div class="errormessage"><p>Mobile number is invalid.</p></div>
+                    </div>
+                </div>
+                <div class="inputsection">
+                    <div class="notrequired">
+                        <label>Gender</label>
+                        <select>
+                            <option value="none" selected> </option>
+                            <option value="female">Female</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="notsay">I'd Rather Not Say</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputsection">
+                    <input class="submit" type="submit" id="regsubmit" disabled>
+                </div>
+            </fieldset>
+        </form>
+
+    </body>
+</html>
